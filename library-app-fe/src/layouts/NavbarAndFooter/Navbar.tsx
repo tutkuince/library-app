@@ -21,7 +21,7 @@ export const Navbar = () => {
                             </li>
                         </ul>
                         <span className="navbar-text">
-                        <button className="btn btn-light" type="button">Sign in</button>
+                        <button className="btn btn-outline-light" type="button">Sign in</button>
                      </span>
                     </div>
                 </div>

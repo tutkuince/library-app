@@ -14,7 +14,7 @@ export const Heros = () => {
                                 Whether it is to learn a new skill or grow within one,
                                 we will be able to provide the top content for you!
                             </p>
-                            <a href="#" className="btn main-color btn-lg text-white">Sign up</a>
+                            <a href="#" className="btn bg-dark btn-lg text-white">Sign up</a>
                         </div>
                     </div>
                 </div>

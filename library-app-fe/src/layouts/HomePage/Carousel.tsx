@@ -50,7 +50,7 @@ export const Carousel = () => {
                 </div>
             </div>
             <div className="homepage-carousel-title mt-3">
-                <a href="#" className="btn btn-outline-secondary btn-lg">Viev More</a>
+                <a href="#" className="btn btn-outline-dark btn-lg">Viev More</a>
             </div>
         </div>
     );
