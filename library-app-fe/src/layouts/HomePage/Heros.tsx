@@ -35,6 +35,37 @@ export const Heros = () => {
                     </div>
                 </div>
             </div>
+            {/* Mobile Heros */}
+            <div className="d-lg-none">
+                <div className="container">
+                    <div className="m-2">
+                        <div className="col-image-left">
+                            <div className="mt-2">
+                                <h1>What have you been reading?</h1>
+                                <p className="lead">
+                                    The library team would love to know what you have been reading.
+                                    Whether it is to learn a new skill or grow within one,
+                                    we will be able to provide the top content for you!
+                                </p>
+                                <a href="#" className="btn main-color btn-lg text-white">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="m-2">
+                        <div className="col-image-right">
+                            <div className="mt-2">
+                                <h1>Our collection is always changing!</h1>
+                                <p className="lead">
+                                    Try to check in daily as our collection is always changing!
+                                    We work nonstop to provide the most accurate book selection possible
+                                    for our Passion 2 Read students! We are diligent about our book selection
+                                    and our book selection and our books are going to be our top priority.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
