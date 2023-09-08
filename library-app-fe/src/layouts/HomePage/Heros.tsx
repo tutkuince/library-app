@@ -26,7 +26,7 @@ export const Heros = () => {
                                 Try to check in daily as our collection is always changing!
                                 We work nonstop to provide the most accurate book selection possible
                                 for our Passion 2 Read students! We are diligent about our book selection
-                                and our book selection and our books are going to be our top priority.
+                                and our books are going to be our top priority.
                             </p>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ export const Heros = () => {
                                     Try to check in daily as our collection is always changing!
                                     We work nonstop to provide the most accurate book selection possible
                                     for our Passion 2 Read students! We are diligent about our book selection
-                                    and our book selection and our books are going to be our top priority.
+                                    and our books are going to be our top priority.
                                 </p>
                             </div>
                         </div>
