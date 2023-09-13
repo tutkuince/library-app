@@ -1,6 +1,48 @@
 import {ReturnBook} from "./ReturnBook";
+import {useEffect, useState} from "react";
+import BookModel from "../../../models/BookModel";
 
 export const Carousel = () => {
+    const [books, setBooks] = useState<BookModel[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [httpError, setHttpError] = useState(null);
+
+    useEffect(() => {
+        const fetchBooks = async () => {
+            const baseUrl: string = "http://localhost:8080/api/books";
+            const url: string = `${baseUrl}?page=0&size=9`;
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Something went wrong!');
+            }
+
+            const responseJson = await response.json();
+
+            const responseData = responseJson._embedded.books;
+
+            const loadedBooks: BookModel[] = [];
+
+            for (const key in loadedBooks) {
+                loadedBooks.push({
+                    id: loadedBooks[key].id,
+                    title: loadedBooks[key].title,
+                    author: loadedBooks[key].author,
+                    description: loadedBooks[key].description,
+                    copies: loadedBooks[key].copies,
+                    copiesAvailable: loadedBooks[key].copiesAvailable,
+                    category: loadedBooks[key].category,
+                    img: loadedBooks[key].img
+                });
+            }
+            setBooks(loadedBooks);
+            setIsLoading(false);
+        };
+        fetcBooks().catch((error: any) => {
+            setIsLoading(false);
+            setHttpError(error.message);
+        })
+    }, [])
+
     return (
         <div className="container mt-5" style={{height: 550}}>
             <div className="homepage-carousel-title">
@@ -46,7 +88,7 @@ export const Carousel = () => {
             {/* Mobile */}
             <div className="d-lg-none mt-3">
                 <div className="row d-flex justify-content-center align-items-center">
-                   <ReturnBook/>
+                    <ReturnBook/>
                 </div>
             </div>
             <div className="homepage-carousel-title mt-3">
