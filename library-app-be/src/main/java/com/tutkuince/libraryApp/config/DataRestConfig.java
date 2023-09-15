@@ -7,6 +7,8 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
+import java.util.Arrays;
+
 @Configuration
 public class DataRestConfig implements RepositoryRestConfigurer {
     private String allowedOrigins = "http://localhost:3030";
@@ -25,7 +27,9 @@ public class DataRestConfig implements RepositoryRestConfigurer {
 
         // Configure CORS Mapping
         cors.addMapping(config.getBasePath() + "/**")
-                .allowedOrigins(allowedOrigins).allowedHeaders("*");
+                .allowedOrigins(allowedOrigins)
+                .allowedHeaders("*");
+
     }
 
     private void disableHttpMethods(Class theClass, RepositoryRestConfiguration config, HttpMethod[] unsupportedActions) {
